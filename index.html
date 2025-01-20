@@ -20,6 +20,25 @@
                 <a class="logo header__logo" href="#">
                     <img src="./img/icon/header--logo.png" alt="Логотип">
                 </a>
+                <button
+    class="burger"
+    aria-label="Открыть меню"
+    aria-expanded="false"
+    data-burger-open="false"
+>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+    <span class="burger__line"></span>
+</button>
+
+<div class="side-menu" id="sideMenu">
+    <ul>
+        <li><a href="#">Главная</a></li>
+        <li><a href="#">О предприятии</a></li>
+        <li><a href="#">Контакты</a></li>
+        <li><a href="#">Услуги</a></li>
+    </ul>
+</div>
                 <div class="header__contacts">
                     <div class="header__contact">
                         <span class="header__caption">По вопросам и предложениям</span>
@@ -71,6 +90,7 @@
                 <a href="#" class="header__button"> <img class="phone__logo" src="./img/icon/phone.png"
                         alt="">ПЕРЕЗВОНИТЕ МНЕ</a>
             </div>
+            
         </div>
     </header>
 
@@ -79,7 +99,8 @@
             <div class="container">
                 <div class="section1--text">
                     <h1>Российский завод<br> силовых машин</h1>
-                    <p class="under">научно-производственное предприятие,<br> занимающееся разработкой и производством<br> силовых
+                    <p class="under">научно-производственное предприятие,<br> занимающееся разработкой и
+                        производством<br> силовых
                         машин.</p>
                 </div>
                 <div class="section1--image">
@@ -119,7 +140,7 @@
 
         <section class="section3">
             <div class="container">
-                <h2 class="h2--sec3" >Продукция</h2>
+                <h2 class="h2--sec3">Продукция</h2>
                 <ul class="product--list">
                     <li class="product--item">
                         <div class="product--card">
@@ -190,34 +211,36 @@
         <section class="section5">
             <div class="container">
                 <h2>Новости</h2>
-            <div class="cards">
-                <div class="card">
-                    <img src="./img/new1.jpg" alt="" class="card__image">
-                    <p class="card__p">НПП «ПИОНЕР» подтвердило свои компетенции в области консультирования и изготовления…</p>
-                    <div class="row--items">
-                        <a href="" class="button--link">Читать далее</a>
-                        <span class="date">20.07.2020</span>
-                    </div>
-                </div>
-
+                <div class="cards">
                     <div class="card">
-                        <img src="./img/new2.jpg" alt="" class="card__image">
-                        <p class="card__p">Поздравляем коллектив регионального представительства «ПИОНЕР» с праздником!</p>
+                        <img src="./img/new1.jpg" alt="" class="card__image">
+                        <p class="card__p">НПП «ПИОНЕР» подтвердило свои компетенции в области консультирования
+                            и изготовления…</p>
                         <div class="row--items">
                             <a href="" class="button--link">Читать далее</a>
                             <span class="date">20.07.2020</span>
                         </div>
                     </div>
 
-                        <div class="card">
-                            <img src="./img/new3.jpg" alt="" class="card__image">
-                            <p class="card__p">Перенос сроков проведения запланированных работ в 2020 году</p>
-                            <div class="row--items">
-                                <a href="" class="button--link">Читать далее</a>
-                                <span class="date">20.07.2020</span>
-                            </div>
+                    <div class="card">
+                        <img src="./img/new2.jpg" alt="" class="card__image">
+                        <p class="card__p">Поздравляем коллектив регионального представительства «ПИОНЕР» с праздником!
+                        </p>
+                        <div class="row--items">
+                            <a href="" class="button--link">Читать далее</a>
+                            <span class="date">20.07.2020</span>
                         </div>
-            </div>
+                    </div>
+
+                    <div class="card">
+                        <img src="./img/new3.jpg" alt="" class="card__image">
+                        <p class="card__p">Перенос сроков проведения запланированных работ в 2020 году</p>
+                        <div class="row--items">
+                            <a href="" class="button--link">Читать далее</a>
+                            <span class="date">20.07.2020</span>
+                        </div>
+                    </div>
+                </div>
 
 
             </div>
@@ -231,7 +254,7 @@
                 <div class="footer__col logo">
                     <a href="" class="logo footer__logo"><img src="./img/icon/footer--logo.png" alt=""></a>
                 </div>
-    
+
                 <div class="footer__col spisok">
                     <div class="all--list">
                         <ul class="footer__list">
@@ -240,7 +263,7 @@
                             <li class="list__item"><a href="" class="item__link">Новости</a></li>
                             <li class="list__item"><a href="" class="item__link">Продукция</a></li>
                         </ul>
-    
+
                         <ul class="footer__list">
                             <li class="list__item"><a href="" class="item__link">Услуги</a></li>
                             <li class="list__item"><a href="" class="item__link">Поддержка</a></li>
@@ -251,13 +274,13 @@
                         <ul class="footer__list">
                             <li class="list__item"><a href="" class="item__link">Файлы</a></li>
                             <li class="list__item"><a href="" class="item__link">Поддержка</a></li>
-                            <li class="list__item"><a href="" class="item__link">Политика 
-                               <br> конфеденциальности</a></li>
+                            <li class="list__item"><a href="" class="item__link">Политика
+                                    <br> конфеденциальности</a></li>
                         </ul>
                     </div>
-                    
+
                 </div>
-                
+
 
             </div>
             <div class="footer--hz">
@@ -266,6 +289,8 @@
             </div>
         </div>
     </footer>
+
+    <script src="slider.js"></script>
 </body>
 
 </html>

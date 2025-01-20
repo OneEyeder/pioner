@@ -525,3 +525,119 @@ padding-bottom: 20px;
     }
 }
 
+@media(min-width: 769px) {
+    .burger {
+        display: none;
+    }
+}
+
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 40px; /* Размер кнопки */
+    height: 40px; /* Размер кнопки */
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10;
+}
+
+.burger__line {
+    width: 30px; /* Длина полосок */
+    height: 3px; /* Толщина полосок */
+    background-color: #333; /* Цвет полосок */
+    border-radius: 2px;
+    transition: all 0.3s ease; /* Анимация для смены состояния */
+    position: relative;
+}
+
+/* Расположение полосок */
+.burger__line:nth-child(1) {
+    transform: translateY(-8px); /* Верхняя полоска */
+}
+
+.burger__line:nth-child(3) {
+    transform: translateY(8px); /* Нижняя полоска */
+}
+
+/* Состояние "открыто" */
+.burger[data-burger-open="true"] .burger__line:nth-child(1) {
+    transform: rotate(45deg); /* Верхняя полоска вращается */
+    translate: 0;
+}
+
+.burger[data-burger-open="true"] .burger__line:nth-child(2) {
+    opacity: 0; /* Средняя полоска исчезает */
+}
+
+.burger[data-burger-open="true"] .burger__line:nth-child(3) {
+    transform: rotate(-45deg); /* Нижняя полоска вращается */
+    translate: 0;
+}
+
+/* Стили для бургер-меню */
+.burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 10; /* Бургер выше, чем меню */
+}
+
+.burger__line {
+    width: 100%;
+    height: 4px;
+    background-color: #333;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+/* Меню */
+.side-menu {
+    position: fixed;
+    top: 0;
+    left: -66.6%; /* Меню изначально скрыто слева */
+    width: 66.6%; /* Ширина меню (2/3 экрана) */
+    height: 100vh; /* Высота на всю страницу */
+    background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный фон */
+    z-index: 20; /* Меню выше основной страницы */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: left 0.3s ease; /* Анимация появления меню */
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.side-menu ul li {
+    margin: 20px 0;
+}
+
+.side-menu ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+/* Когда меню открыто */
+.side-menu.open {
+    left: 0; /* Меню появляется */
+}
+
+/* Блокировка основного контента */
+.body-lock {
+    overflow: hidden; /* Блокирует прокрутку страницы */
+}
