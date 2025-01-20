@@ -443,9 +443,7 @@ padding-bottom: 20px;
         flex-direction: column;
     }
 
-    .main {
-    }
-
+    
     h2 {
         font-size: 36px;
     }
@@ -488,11 +486,23 @@ padding-bottom: 20px;
     }
 
     .footer__col.spisok {
-        display: none;
+        display: grid;
+       
+    }
+    .all--list {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Две колонки на телефоне */
+        gap: 20px; /* Расстояние между колонками */
     }
 
-   
-   
+    .content {
+        display: flex;
+        flex-direction: column; /* Переводим элементы в вертикальный порядок */
+    }
+
+    .footer__col.logo {
+        order: -1; /* Ставим лого выше остальных элементов */
+    }
 
     .container {
         max-width: 386px;
