@@ -426,6 +426,7 @@ padding-bottom: 20px;
 
     h1 {
         font-size: 40px;
+        line-height: 42px;
     }
 
     .section1--text {
@@ -440,11 +441,9 @@ padding-bottom: 20px;
     .section1--image {
         display: flex;
         flex-direction: column;
-        width: 94%;
     }
 
     .main {
-        padding-left: 25px;
     }
 
     h2 {
@@ -461,8 +460,16 @@ padding-bottom: 20px;
         grid-template-columns: repeat(1, 1fr);
         gap: 20px;
     }
-    .company--image {
-        max-width: 380px;
+
+    .about--text,
+    .about--image {
+        width: 100%; /* Устанавливаем ширину 100% для обеих секций */
+        margin: 0 auto; /* Центрируем их, если есть фиксированные размеры */
+    }
+
+    .about--image img {
+        width: 100%; /* Изображения масштабируются по ширине родителя */
+        height: auto; /* Сохраняются пропорции изображения */
     }
 
     .product--list {
@@ -484,12 +491,27 @@ padding-bottom: 20px;
         display: none;
     }
 
-    .footer__col {
-        padding-left: 15px;
+   
+   
+
+    .container {
+        max-width: 386px;
     }
 
-    .header__logo {
-     padding-left: 15px;
+    .section2 {
+        padding-bottom: 20px;
+    }
+
+    .h2--sec2 {
+        margin-bottom: 0;
+    }
+
+    .h2--sec3 {
+        margin-bottom: 10px;
+    }
+
+    .under {
+        padding-bottom: 15px;
     }
 }
 
