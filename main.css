@@ -556,11 +556,11 @@ padding-bottom: 20px;
 
 /* Расположение полосок */
 .burger__line:nth-child(1) {
-    transform: translateY(-8px); /* Верхняя полоска */
+    transform: translateY(-1px); /* Верхняя полоска */
 }
 
 .burger__line:nth-child(3) {
-    transform: translateY(8px); /* Нижняя полоска */
+    transform: translateY(1px); /* Нижняя полоска */
 }
 
 /* Состояние "открыто" */
@@ -594,7 +594,7 @@ padding-bottom: 20px;
 
 .burger__line {
     width: 100%;
-    height: 4px;
+    height: 3px;
     background-color: #333;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -611,7 +611,8 @@ padding-bottom: 20px;
     z-index: 20; /* Меню выше основной страницы */
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    gap:  100px;
     align-items: center;
     transition: left 0.3s ease; /* Анимация появления меню */
 }
@@ -641,3 +642,101 @@ padding-bottom: 20px;
 .body-lock {
     overflow: hidden; /* Блокирует прокрутку страницы */
 }
+
+@media (max-width: 768px) {
+    .side-menu {
+    position: fixed;
+    top: 0;
+    left: -66.6%; /* Меню изначально скрыто слева */
+    width: 66.6%; /* Ширина меню (2/3 экрана) */
+    height: 100vh; /* Высота на всю страницу */
+    background-color: rgba(255, 255, 255, 1); /* Белый фон */
+    z-index: 20; /* Меню выше основной страницы */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределить контент сверху и снизу */
+    padding: 30px 20px; /* Внутренние отступы */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Тень для эффекта */
+    transition: left 0.3s ease; /* Анимация появления меню */
+}
+
+.side-menu ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    text-align: left; /* Текст выравнен по левому краю */
+}
+
+.side-menu ul li {
+    margin-bottom: 15px; /* Отступ между пунктами */
+}
+
+.side-menu ul li a {
+    color: #333; /* Цвет текста */
+    text-decoration: none;
+    font-size: 16px; /* Размер текста */
+    font-weight: 500;
+}
+
+.header__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #333;
+    font-size: 14px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.header__button img {
+    margin-right: 10px; /* Отступ для иконки */
+    height: 16px;
+}
+
+.contacts--burger {
+    border-top: 1px dashed #ccc; /* Разделитель */
+    padding-top: 20px;
+    width: 100%;
+}
+
+.header__contact {
+    margin-bottom: 15px;
+}
+
+.header__caption {
+    display: block;
+    font-size: 12px;
+    color: #777;
+    margin-bottom: 5px;
+}
+
+.header__link {
+    color: #333;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.header__link.mail {
+    color: #0056b3; /* Синий для email */
+}
+
+.side-menu.open {
+    left: 0; /* Меню появляется */
+}
+
+.body-lock {
+    overflow: hidden; /* Блокирует прокрутку страницы */
+}
+
+}
+
+@media (min-width: 789px) {
+    .burger {
+        display: none;
+    }
+}
+
